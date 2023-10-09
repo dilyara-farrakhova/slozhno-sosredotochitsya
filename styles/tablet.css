@@ -1,0 +1,46 @@
+@media (768px <= width < 1024px) {
+  :root {
+    --default-spacing: 20px;
+  }
+
+  .page {
+    gap: 80px;
+  }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header .title {
+    margin-left: -20px;
+  }
+
+  .header {
+    padding-top: 171px;
+    padding-bottom: 164px;
+  }
+
+  .content {
+    gap: 80px;
+  }
+
+  .point {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .point > .point-section {
+    grid-column: span 2;
+  }
+
+  .point.points-title-column {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .point.points-title-column > .point-section {
+    grid-column-start: 2;
+  }
+
+  .gallery {
+    grid-template-rows: 192px 230px 318px;
+  }
+}

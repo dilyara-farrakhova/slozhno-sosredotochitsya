@@ -1,0 +1,76 @@
+@media (min-width: 1024px) {
+  :root {
+    --default-spacing: 20px;
+  }
+
+  .page {
+    gap: 80px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header .title {
+    margin-top: 140px;
+    margin-left: -20px;
+  }
+
+  .header-description {
+    display: inline-block;
+    justify-self: end;
+    align-self: center;
+    width: 491px;
+  }
+
+  .header {
+    padding-top: 0;
+    padding-bottom: 114px;
+  }
+
+  .content {
+    gap: 80px;
+  }
+
+  .point {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .point > .point-section {
+    grid-column: span 3;
+  }
+
+  .point.points-title-column {
+    grid-template-columns: 1fr 2.06fr;
+  }
+
+  .point.points-title-column > .point-section {
+    grid-column-start: 2;
+  }
+
+  .point-sections-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .point-sections-columns .point-title {
+    grid-column: 1;
+  }
+
+  .point-sections-columns .point-section {
+    grid-column: unset;
+    grid-row: 2;
+  }
+
+  .gallery {
+    grid-template-rows: 260px 315px 428px;
+    gap: 20px;
+  }
+}
