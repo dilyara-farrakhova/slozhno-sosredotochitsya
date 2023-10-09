@@ -4,7 +4,7 @@
   }
 
   .page {
-    gap: 80px;
+    gap: 60px;
   }
 
   .header__theme-menu {
@@ -32,8 +32,8 @@
   }
 
   .header {
-    padding-top: 0;
-    padding-bottom: 114px;
+    padding: var(--default-spacing) var(--default-spacing) 134px var(--default-spacing);
+    height: max(100vh, 768px);
   }
 
   .content {
@@ -70,7 +70,11 @@
   }
 
   .gallery {
-    grid-template-rows: 260px 315px 428px;
+    grid-template-rows: 260px 315px 432px;
     gap: 20px;
+  }
+
+  .footer {
+    height: max(100vh, 768px);
   }
 }
