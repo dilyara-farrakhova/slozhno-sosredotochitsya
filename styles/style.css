@@ -81,8 +81,8 @@
   gap: 10px;
   color: var(--accent-color);
   line-height: 25px;
-  inset-inline-end: 7px;
-  inset-block-start: 0;
+  inset-inline-end: calc(6px + var(--default-spacing));
+  inset-block-start: var(--default-spacing);
 }
 
 .rec-icon::after {
@@ -255,3 +255,143 @@
   width: 100%;
   height: max(100vh, 668px);
 }
+
+/* Table styles */
+@media (768px <= width < 1024px) {
+  :root {
+    --default-spacing: 20px;
+  }
+
+  .page {
+    gap: 60px;
+  }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header .title {
+    margin-left: -20px;
+  }
+
+  .header {
+    height: max(100vh, 1024px);
+    padding: 191px var(--default-spacing) 184px var(--default-spacing);
+  }
+
+  .content {
+    gap: 80px;
+  }
+
+  .point {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .point > .point-section {
+    grid-column: span 2;
+  }
+
+  .point > .point-section.gallery {
+    grid-column: span 3;
+  }
+
+  .point.points-title-column {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .point.points-title-column > .point-section {
+    grid-column-start: 2;
+  }
+
+  .gallery {
+    grid-template-rows: 192px 230px 318px;
+  }
+
+  .footer {
+    height: max(100vh, 1024px);
+  }
+}
+
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  :root {
+    --default-spacing: 20px;
+  }
+
+  .page {
+    gap: 60px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header .title {
+    margin-top: 140px;
+    margin-left: -20px;
+  }
+
+  .header-description {
+    display: inline-block;
+    justify-self: end;
+    align-self: center;
+    width: 491px;
+  }
+
+  .header {
+    height: max(100vh, 768px);
+    padding: var(--default-spacing) var(--default-spacing) 134px var(--default-spacing);
+  }
+
+  .content {
+    gap: 80px;
+  }
+
+  .point {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .point > .point-section {
+    grid-column: span 3;
+  }
+
+  .point.points-title-column {
+    grid-template-columns: 1fr 2.06fr;
+  }
+
+  .point.points-title-column > .point-section {
+    grid-column-start: 2;
+  }
+
+  .point-sections-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .point-sections-columns .point-title {
+    grid-column: 1;
+  }
+
+  .point-sections-columns .point-section {
+    grid-column: unset;
+    grid-row: 2;
+  }
+
+  .gallery {
+    grid-template-rows: 260px 315px 432px;
+    gap: 20px;
+  }
+
+  .footer {
+    height: max(100vh, 768px);
+  }
+}
+
